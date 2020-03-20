@@ -42,6 +42,7 @@ namespace DatingApp.API
             });
             services.AddTransient<Seed>();
             services.AddCors();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -86,7 +87,7 @@ namespace DatingApp.API
             //esta linea tmb la tuve que agregar yo
             //app.UseMvc();
             
-            // seeder.SeedUsers();
+            //seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod()
             .AllowAnyHeader());
             app.UseAuthentication();

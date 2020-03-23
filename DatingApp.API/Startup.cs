@@ -54,6 +54,7 @@ namespace DatingApp.API
                     ValidateAudience = false
                 };
             });
+            services.AddScoped<LogUserActivity>();
             
             //esta linea la agregue yo porque no aparecio al crear el proyecto
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);

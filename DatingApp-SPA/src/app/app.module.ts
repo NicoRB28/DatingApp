@@ -32,7 +32,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-
+import {TimeagoModule} from 'ngx-timeago';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -62,6 +62,7 @@ export function tokenGetter() {
       FormsModule,
       MatTabsModule,
       ReactiveFormsModule,
+      TimeagoModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),

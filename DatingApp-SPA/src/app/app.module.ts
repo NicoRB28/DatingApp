@@ -8,7 +8,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FileUploadModule } from 'ng2-file-upload';
 
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule, BsDatepickerModule } from 'ngx-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -54,6 +54,7 @@ export function tokenGetter() {
    ],
    imports: [
       BrowserModule,
+      BsDatepickerModule.forRoot(),
       GalleryModule,
       AppRoutingModule,
       HttpClientModule,
